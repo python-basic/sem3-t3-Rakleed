@@ -27,9 +27,33 @@
 ```
 ![Result of indepworkinvar3-3](https://github.com/python-basic/sem3-t3-Rakleed/blob/master/src/programming-indepworkinvar3-3-result.png)
 
-### [3.4. ]()
+### [3.4. Реализация программы, шифрующей строку, задаваемую пользователем, с помощью алгоритма шифрования ROT13.]()
 ```python
+"""
+    Автор: Моисеенко Павел, группа № 1, подгруппа № 2.
 
+    Задание: реализовать программу шифрующую строку, задаваемую
+    пользователем, с помощью алгоритма шифрования ROT13.
+
+"""
+
+
+def rot13(letter):
+    if ord("a") + 13 > ord(letter) >= ord("a"):
+        return chr(ord(letter) + 13)
+    elif ord("z") >= ord(letter) >= ord("a") + 13:
+        return chr(ord(letter) - 13)
+    else:
+        return letter
+
+
+def main():
+    text_to_encrypt = input("Введите текст, который нужно зашифровать: ")
+    cipher_text = "".join(list(map(rot13, text_to_encrypt)))
+    print("Результат шифрования:", cipher_text)
+
+
+main()
 ```
 ![Result of indepworkinvar3-4](https://github.com/python-basic/sem3-t3-Rakleed/blob/master/src/programming-indepworkinvar3-4-result.png)
 
