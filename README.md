@@ -27,7 +27,7 @@
 ```
 ![Result of indepworkinvar3-3](https://github.com/python-basic/sem3-t3-Rakleed/blob/master/src/programming-indepworkinvar3-3-result.png)
 
-### [3.4. Реализация программы, шифрующей строку, задаваемую пользователем, с помощью алгоритма шифрования ROT13.]()
+### [3.4. Реализация программы, шифрующей строку, задаваемую пользователем, с помощью алгоритма шифрования ROT13.](https://repl.it/@Rakleed/programming-indepworkinvar3-4)
 ```python
 """
     Автор: Моисеенко Павел, группа № 1, подгруппа № 2.
