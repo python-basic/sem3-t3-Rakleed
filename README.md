@@ -15,9 +15,42 @@
 ### 3.1. Создание аннотированного списка библиотек для работы с текстом в Python.
 [Результат.](https://github.com/python-basic/sem3-t3-Rakleed/blob/master/src/programming-indepworkinvar3-1-result.pdf)
 
-### [3.2. ](https://repl.it/@Rakleed/programming-indepworkinvar3-2)
+### [3.2. Разработка сценария с реализацией операции поиска подстроки в тексте.](https://repl.it/@Rakleed/programming-indepworkinvar3-2)
 ```python
+"""
+    Автор: Моисеенко Павел, группа № 1, подгруппа № 2.
 
+    ИСР 3.2. Задание: разработайте сценарий с реализацией операции поиска подстроки в тексте.
+
+"""
+
+
+def main():
+    search_string = input("Введите строку. ")
+    what_to_find = input("Что бы вы хотели найти? ")
+    all_occurrences(search_string, what_to_find)
+
+
+def all_occurrences(search_string, what_to_find):
+    occurrence = search_string.find(what_to_find)
+    if occurrence != -1:
+        print('Первое вхождение подстроки:', occurrence)
+    else:
+        print('Нет вхождений подстроки.')
+
+    length_search_string = len(search_string)
+    length_what_to_find = len(what_to_find)
+    while occurrence != -1:
+        occurrence = search_string.find(what_to_find, occurrence +
+                                        length_what_to_find,
+                                        length_search_string)
+        if occurrence != -1:
+            print('Вхождение подстроки:', occurrence)
+        else:
+            print('Больше вхождений нет.')
+
+
+main()
 ```
 ![Result of indepworkinvar3-2](https://github.com/python-basic/sem3-t3-Rakleed/blob/master/src/programming-indepworkinvar3-2-result.png)
 
