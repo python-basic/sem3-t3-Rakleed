@@ -121,15 +121,45 @@ main()
 ![Result of indepworkinvar3-4](https://github.com/python-basic/sem3-t3-Rakleed/blob/master/src/programming-indepworkinvar3-4-result.png)
 
 # Вариативная самостоятельная работа № 3
-### [3.1. ]()
+### [3.1. Реализация программы-игры «Угадай число», в которой для вывода на экран информации используется метод format.](https://repl.it/@Rakleed/programming-indepworkvar3-1)
+```python
+"""
+    Автор: Моисеенко Павел, группа № 1, подгруппа № 2.
+
+    ИСР 3.3. Задание: реализовать программу-игру «Угадай число», в
+    которой для вывода на экран информации использовать метод format.
+
+"""
+
+
+def guess_number(a, b):
+    import random
+    random_number = random.randint(a, b)
+    user_number = -0.5
+    while random_number != user_number:
+        user_number = int(input('Введите число: '))
+        if user_number < random_number:
+            print('Вы не угадали, введите число больше.')
+        elif user_number > random_number:
+            print('Вы не угадали, введите число меньше.')
+    print('Вы угадали число {} из диапазона [{}, {}]!'.format(random_number,
+                                                             a, b))
+
+
+def main():
+    print('Введите диапазон для игры.')
+    a = int(input('Нижний предел: '))
+    b = int(input('Верхний предел: '))
+    guess_number(a, b)
+
+
+main()
+```
+![Result of indepworkvar3-1](https://github.com/python-basic/sem3-t3-Rakleed/blob/master/src/programming-indepworkvar3-1-result.png)
+
+### [3.2. ](https://repl.it/@Rakleed/programming-indepworkvar3-2)
+
 ```python
 
 ```
-![Result of indepworkvar3-1]()
-
-### [3.2. ]()
-
-```python
-
-```
-![Result of indepworkvar3-2]()
+![Result of indepworkvar3-2](https://github.com/python-basic/sem3-t3-Rakleed/blob/master/src/programming-indepworkvar3-2-result.png)
